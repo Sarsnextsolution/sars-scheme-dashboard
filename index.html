@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SARS Dashboard</title>
+  <title>Premium Dashboard</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
 
-<div class="container">
+<div class="layout">
 
-  <h1>Scheme Monitoring Dashboard</h1>
-
-  <div class="cards">
-    <div class="card">Total Beneficiaries<br><b>1,245</b></div>
-    <div class="card">Total Disbursement<br><b>₹12.5 Cr</b></div>
-    <div class="card">Active Schemes<br><b>8</b></div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>SARS</h2>
+    <p>Dashboard</p>
+    <p>Analytics</p>
+    <p>Reports</p>
   </div>
 
-  <canvas id="barChart"></canvas>
+  <!-- Main -->
+  <div class="main">
 
-  <h2>Beneficiary Data</h2>
+    <h1>Scheme Dashboard</h1>
 
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>State</th>
-      <th>Amount</th>
-    </tr>
-    <tr>
-      <td>Ravi</td>
-      <td>AP</td>
-      <td>₹50,000</td>
-    </tr>
-    <tr>
-      <td>Sita</td>
-      <td>TS</td>
-      <td>₹75,000</td>
-    </tr>
-  </table>
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card glass">
+        <p>Total Beneficiaries</p>
+        <h2 id="totalUsers"></h2>
+      </div>
+
+      <div class="card glass">
+        <p>Total Amount</p>
+        <h2 id="totalAmount"></h2>
+      </div>
+
+      <div class="card glass">
+        <p>States Covered</p>
+        <h2 id="stateCount"></h2>
+      </div>
+    </div>
+
+    <!-- Filter -->
+    <select id="stateFilter" class="glass">
+      <option value="All">All States</option>
+      <option value="AP">Andhra Pradesh</option>
+      <option value="TS">Telangana</option>
+      <option value="MH">Maharashtra</option>
+      <option value="KA">Karnataka</option>
+      <option value="TN">Tamil Nadu</option>
+    </select>
+
+    <!-- Charts -->
+    <div class="charts">
+      <div class="chart-box glass">
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="chart-box glass">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table glass">
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>State</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+  </div>
 
 </div>
 
