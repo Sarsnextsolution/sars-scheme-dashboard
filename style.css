@@ -1,16 +1,17 @@
+/* GLOBAL */
 body {
   margin: 0;
-  font-family: 'Segoe UI';
+  font-family: 'Segoe UI', Arial;
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
 }
 
-/* Layout */
+/* LAYOUT */
 .layout {
   display: flex;
 }
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar {
   width: 220px;
   background: rgba(0,0,0,0.3);
@@ -19,25 +20,40 @@ body {
   height: 100vh;
 }
 
-.sidebar p {
-  margin: 15px 0;
+.sidebar h2 {
+  margin-bottom: 20px;
 }
 
-/* Main */
+.sidebar p {
+  margin: 15px 0;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.sidebar p:hover {
+  opacity: 1;
+}
+
+/* MAIN */
 .main {
   flex: 1;
   padding: 20px;
 }
 
-/* Glass Effect */
+/* HEADINGS */
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+/* GLASS EFFECT */
 .glass {
   background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 15px;
 }
 
-/* Cards */
+/* KPI CARDS */
 .cards {
   display: flex;
   gap: 20px;
@@ -46,17 +62,29 @@ body {
 
 .card {
   flex: 1;
+  transition: transform 0.2s ease;
 }
 
-/* Filter */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FILTER DROPDOWN FIXED */
 select {
   padding: 10px;
-  border: none;
-  color: white;
   margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.95);
+  color: black;
+  font-weight: 500;
 }
 
-/* Charts */
+select option {
+  color: black;
+}
+
+/* CHART SECTION */
 .charts {
   display: flex;
   gap: 20px;
@@ -68,7 +96,13 @@ select {
   height: 300px;
 }
 
-/* Table */
+/* CANVAS FIX */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* TABLE */
 .table {
   padding: 10px;
 }
@@ -81,6 +115,7 @@ table {
 th {
   padding: 10px;
   text-align: left;
+  background: rgba(0,0,0,0.3);
 }
 
 td {
@@ -88,7 +123,26 @@ td {
   border-top: 1px solid rgba(255,255,255,0.2);
 }
 
-canvas {
-  width: 100% !important;
-  height: 100% !important;
+/* SCROLLBAR (OPTIONAL PREMIUM LOOK) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+/* BUTTON STYLE (IF NEEDED) */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2563eb;
 }
