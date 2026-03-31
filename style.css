@@ -1,38 +1,94 @@
 body {
-  font-family: Arial;
-  background: #f4f6f9;
   margin: 0;
+  font-family: 'Segoe UI';
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
 }
 
-.container {
+/* Layout */
+.layout {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar p {
+  margin: 15px 0;
+}
+
+/* Main */
+.main {
+  flex: 1;
   padding: 20px;
 }
 
-h1 {
-  color: #2c3e50;
+/* Glass Effect */
+.glass {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px;
 }
 
+/* Cards */
 .cards {
   display: flex;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
   flex: 1;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  border-radius: 10px;
+}
+
+/* Filter */
+select {
+  padding: 10px;
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Charts */
+.charts {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-box {
+  width: 50%;
+  height: 300px;
+}
+
+/* Table */
+.table {
+  padding: 10px;
 }
 
 table {
   width: 100%;
-  background: white;
-  margin-top: 20px;
   border-collapse: collapse;
 }
 
-th, td {
+th {
   padding: 10px;
-  border: 1px solid #ddd;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
